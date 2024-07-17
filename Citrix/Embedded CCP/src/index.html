@@ -1,0 +1,106 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: MIT-0 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazon Connect Audio Optimization for Citrix - Embedded CCP Sample</title>
+    <link rel="icon" href="favicon.ico" />
+    <style>
+        @keyframes glowing {
+            0% {
+                background-color: #2ba805;
+                box-shadow: 0 0 5px #2ba805;
+            }
+
+            50% {
+                background-color: #49e819;
+                box-shadow: 0 0 20px #49e819;
+            }
+
+            100% {
+                background-color: #2ba805;
+                box-shadow: 0 0 5px #2ba805;
+            }
+        }
+
+        .glowingButton {
+            animation: glowing 1300ms infinite;
+        }
+
+        .heading-container {
+            background-color: rgb(8, 1, 37);
+            height: 80px;
+            margin: 10px;
+            z-index: 0;
+        }
+
+        .heading h1 {
+            font-size: 30px;
+            color: white;
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+
+        .contact-button {
+            border-style: solid;
+            border-color: black;
+            border-width: thin;
+            padding: 10px;
+            margin: 10px 60px 10px 60px
+        }
+
+        html * {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading-container" id="topDiv">
+        <div class="heading" id="myApp">
+            <h1>Amazon Connect Audio Optimization for Citrix - Embedded CCP Sample<h1>
+        </div>
+    </div>
+    <small style="padding-left: 30px;">NOTE : Please wait for 10 - 30 seconds until the authentication pop-up appears.
+        Ignore if already logged in.</small>
+    <div id="gridDiv" style="display: grid; grid-template-columns: 400px auto auto;">
+        <div id="embeddedCCPDiv" style="margin: 10px; width: 400px; height: 500px;">
+            <div id="container-div" style="width: 390px; height: 500px;"></div>
+        </div>
+        <div id="extendedCCPDiv">
+            <!-- custom user experience goes here -->
+            <div id="agentGreetingDiv" style="margin: 10px 60px 10px 30px;">
+                <!-- Say Hi to the agent -->
+                Hi <span id="agentName" style="font-weight: bold;"></span>
+            </div>
+            <div id="agentStatusDiv" style="margin: 10px 60px 10px 30px;">
+                <!-- Show the agents status -->
+                Status: <span id="agentStatus" style="font-weight: bold;"></span>
+            </div>
+            <div id="vdiClientStatus" style="margin: 10px 60px 10px 30px;">
+                <p>VDI client connecting ... </p>
+            </div>
+            <div style="margin: 10px 60px 10px 30px;">
+                Microphone:
+                <select id="audioInput" style="margin: 10px 60px 10px 0px; padding: 10px">
+                </select>
+            </div>
+            <div style="margin: 10px 60px 10px 30px;">
+                Speaker:
+                <select id="audioOutput" style="margin: 10px 60px 10px 0px; padding: 10px">
+                </select>
+            </div>
+            <small style="margin: 10px 60px 10px 30px;">NOTE : Selected Microphone and Speaker will be applied to next
+                call.</small>
+        </div>
+    </div>
+    <audio id="remote-audio" playsinline autoplay></audio>
+</body>
+
+</html>
+<script src="./js/streams/connect-streams-min.js"></script>
+<script src="./js/rtc/connect-rtc.min.js"></script>
+<script type="module" src="./scripts/index.js"></script>

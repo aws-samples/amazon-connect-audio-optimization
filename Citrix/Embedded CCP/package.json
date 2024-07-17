@@ -1,0 +1,29 @@
+{
+  "name": "amazon-connect-audio-optimization-for-citrix-embedded-ccp-sample",
+  "version": "1.0.0",
+  "description": "Amazon Connect Audio Optimization for Citrix - Sample Embedded CCP web application with infrastructure built using AWS CDL for an HTTPS site using S3 and CloudFront.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": {
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com",
+    "organization": true
+  },
+  "license": "MIT-0",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "aws-cdk": "2.118.0",
+    "eslint": "^8.56.0",
+    "express": "^4.17.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.118.0",
+    "cdk-nag": "^2.28.20",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
