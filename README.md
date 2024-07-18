@@ -8,7 +8,7 @@ This library is divided into vendor specific deployments relative to [Amazon Con
 Each subfolder has a `README.md` which provides details about the sample code, how to configure the sample code, how to deploy the sample code and other relevant information.
 
 ### Citrix
-Within the Citrix folder are examples for both an Embedded CCP and Custom CCP that utilizes [Amazon Connect audio optimization for Citrix](https://docs.aws.amazon.com/connect/latest/adminguide/using-ccp-vdi-citrix-step-by-step.html)
+Within the [Citrix](https://github.com/aws-samples/amazon-connect-audio-optimization/tree/main/Citrix) folder are examples for both an Embedded CCP and Custom CCP that utilizes [Amazon Connect audio optimization for Citrix](https://docs.aws.amazon.com/connect/latest/adminguide/using-ccp-vdi-citrix-step-by-step.html)
 
 ## Where can I find more documentation?
 To learn more about using Amazon Connect in a VDI environment check out the [official documentation](https://docs.aws.amazon.com/connect/latest/adminguide/using-ccp-vdi.html).
